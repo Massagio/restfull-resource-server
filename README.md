@@ -15,3 +15,5 @@ composer create-project --prefer-dist -s dev "githubjeka/rest-yii2" .
 ```
 
 ###GETTING STARTED
+
+add 'auth_server' to params-local.php
