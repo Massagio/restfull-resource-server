@@ -1,6 +1,6 @@
 <?php
 
-namespace rest\versions\v1\models;
+namespace rest\versions\v2\models;
 
 use common\models\User as CommonUser;
 use yii\filters\RateLimitInterface;
