@@ -45,13 +45,13 @@ After creating and setting up the advanced application, follow these steps to pr
    cd frontend
    codecept build
    codecept run
-   
-   # backend tests
-   
-   cd backend
+
+   # rest tests
+
+   cd rest
    codecept build
    codecept run
-    
+
    # etc.
    ```
 

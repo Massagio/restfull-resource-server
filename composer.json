@@ -1,26 +1,25 @@
 {
-    "name": "githubjeka/rest-yii2",
-    "description": "Yii 2 Rest Api Template",
+    "name": "massagio/rest-yii2",
+    "description": "Yii 2 Rest Api Template forked from githubjeka",
     "keywords": ["yii2", "rest", "application template", "api"],
-    "homepage": "https://github.com/githubjeka/yii2-rest",
+    "homepage": "https://github.com/massagio/yii2-rest",
     "type": "project",
     "license": "BSD-4-Clause",
     "authors": [
         {
-            "name": "Evgeniy Tkachenko",
-            "email": "et.coder@gmail.com",
+            "name": "Daniel Fiebig",
+            "email": "daniel@massagio.de",
             "role": "Developer"
         }
     ],
     "support": {
-        "issues": "https://github.com/githubjeka/yii2-rest/issues",
-        "source": "https://github.com/githubjeka/yii2-rest"
+        "issues": "https://github.com/massagio/yii2-rest/issues",
+        "source": "https://github.com/massagio/yii2-rest"
     },
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "*",
-        "yiisoft/yii2-bootstrap": "*"
+        "php": ">=5.5.0",
+        "yiisoft/yii2": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
