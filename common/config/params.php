@@ -7,5 +7,4 @@ return [
     'perRateLimit'=>30,
     'maxGetRateLimit'=>2,
     'perGetRateLimit'=>1,
-
 ];

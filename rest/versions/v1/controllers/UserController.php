@@ -10,6 +10,47 @@ use yii\rest\Controller;
  */
 class UserController extends Controller
 {
+
+  public function behaviors()
+      {
+          $behaviors = parent::behaviors();
+
+          $behaviors['rateLimiter'] = [
+              'class' => RateLimiter::className(),
+              'enableRateLimitHeaders' => true,
+          ];
+
+          $behaviors['authenticator'] = [
+              'class' => CompositeAuth::className(),
+
+              'authMethods' => [
+                  HttpBasicAuth::className(),
+                  HttpBearerAuth::className(),
+                  QueryParamAuth::className(),
+              ],
+              //'except' => ['this']
+          ];
+
+          $behaviors['contentNegotiator'] = [
+              'class' => ContentNegotiator::className(),
+              'only' => [
+                  'option',
+              ],
+              'formats' => [
+                  'application/json' => Response::FORMAT_JSON,
+              ]
+          ];
+          $behaviors['authaccess'] = [
+              'class' => AuthAccessFilter::className()
+          ];
+          $behaviors['verbs'] = [
+              'class' => VerbFilter::className(),
+              'actions' => [
+                  'option' => ['OPTIONS'],
+              ],
+          ];
+          return $behaviors;
+      }
     /**
      * This method implemented to demonstrate the receipt of the token.
      * Do not use it on production systems.
