@@ -26,16 +26,11 @@ return [
     'Development' => [
         'path' => 'dev',
         'setWritable' => [
-            'backend/runtime',
-            'backend/web/assets',
             'rest/runtime',
         ],
         'setExecutable' => [
             'yii',
             'tests/codeception/bin/yii',
-        ],
-        'setCookieValidationKey' => [
-            'backend/config/main-local.php',
         ],
     ],
 ];
